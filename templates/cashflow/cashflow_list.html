@@ -1,0 +1,29 @@
+{% extends 'cashflow/base.html' %}
+
+{% block title %}Cash Flow Records{% endblock %}
+{% block heading %}Cash Flow Records{% endblock %}
+
+{% block content %}
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="card-title mb-0">Filter Records</h5>
+        </div>
+        <div class="card-body">
+            <form method="get" class="row g-3">
+                <div class="col-md-3">
+                    <label for="{{ filter_form.date_from.id_for_label }}" class="form-label">From Date</label>
+                    {{ filter_form.date_from }}
+                </div>
+                <div class="col-md-3">
+                    <label for="{{ filter_form.date_to.id_for_label }}" class="form-label">To Date</label>
+                    {{ filter_form.date_to }}
+                </div>
+                <div class="col-md-3">
+                    <label for="{{ filter_form.status.id_for_label }}" class="form-label">Status</label>
+                    {{ filter_form.status }}
+                </div>
+                <div class="col-md-3">
+                    <label for="{{ filter_form.type.id_for_label }}" class="form-label">Type</label>
+                    {{ filter_form.type }}
+                </div>
+                <div class="col-md-
